@@ -809,27 +809,27 @@ img { display:block; max-width:100%; }
 <!-- ═══ SIDEBAR ═══════════════════════════════════════════════════ -->
 <nav class="sidebar" id="sidebar">
   <div class="sidebar-section-label">Navigation</div>
-  <div class="nav-item active" onclick="showPanel('dashboard',this)">
+  <div class="nav-item active" data-nav="dashboard" onclick="showPanel('dashboard')">
     <span class="ni-icon">🏠</span> Dashboard <span class="ni-badge">Home</span>
   </div>
-  <div class="nav-item" onclick="showPanel('profile',this)">
+  <div class="nav-item" data-nav="profile" onclick="showPanel('profile')">
     <span class="ni-icon">👤</span> Profile
   </div>
-  <div class="nav-item" onclick="showPanel('journey',this)">
+  <div class="nav-item" data-nav="journey" onclick="showPanel('journey')">
     <span class="ni-icon">🗺️</span> Journey
   </div>
-  <div class="nav-item" onclick="showPanel('projects',this)">
+  <div class="nav-item" data-nav="projects" onclick="showPanel('projects')">
     <span class="ni-icon">💼</span> Projects <span class="ni-badge">6</span>
   </div>
   <div class="sidebar-section-label">Technical</div>
-  <div class="nav-item" onclick="showPanel('stack',this)">
+  <div class="nav-item" data-nav="stack" onclick="showPanel('stack')">
     <span class="ni-icon">🛠️</span> Tech Stack
   </div>
-  <div class="nav-item" onclick="showPanel('cv',this)">
+  <div class="nav-item" data-nav="cv" onclick="showPanel('cv')">
     <span class="ni-icon">📄</span> CV / Resume
   </div>
   <div class="sidebar-section-label">Connect</div>
-  <div class="nav-item" onclick="showPanel('contact',this)">
+  <div class="nav-item" data-nav="contact" onclick="showPanel('contact')">
     <span class="ni-icon">📬</span> Contact
   </div>
   <div style="margin-top:auto; padding: 1.25rem; border-top: 1px solid var(--border); margin-left:0;">
@@ -858,9 +858,9 @@ img { display:block; max-width:100%; }
           Building <strong>production-grade LLM-powered systems</strong> that earn trust through safety, accuracy, and real business value — at scale, in <strong>regulated industries</strong> across banking, healthcare, pharma, and investment since 2016.
         </p>
         <div class="hero-actions">
-          <button class="btn btn-primary" onclick="showPanel('journey', document.querySelectorAll('.nav-item')[2])">🗺️ View Journey</button>
-          <button class="btn btn-ghost" onclick="showPanel('projects', document.querySelectorAll('.nav-item')[3])">💼 See Projects</button>
-          <button class="btn btn-ghost" onclick="showPanel('contact', document.querySelectorAll('.nav-item')[6])">📬 Get In Touch</button>
+          <button class="btn btn-primary" onclick="showPanel('journey')">🗺️ View Journey</button>
+          <button class="btn btn-ghost" onclick="showPanel('projects')">💼 See Projects</button>
+          <button class="btn btn-ghost" onclick="showPanel('contact')">📬 Get In Touch</button>
         </div>
       </div>
       <div class="hero-right">
@@ -875,12 +875,12 @@ img { display:block; max-width:100%; }
       <div class="card card-accent">
         <div style="font-size:11px;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem;">⚡ Quick Navigate</div>
         <div class="quick-links">
-          <div class="qlink" onclick="showPanel('profile', document.querySelectorAll('.nav-item')[1])"><span class="ql-icon">👤</span> About Me <span class="ql-arrow">→</span></div>
-          <div class="qlink" onclick="showPanel('journey', document.querySelectorAll('.nav-item')[2])"><span class="ql-icon">🗺️</span> Career Journey <span class="ql-arrow">→</span></div>
-          <div class="qlink" onclick="showPanel('projects', document.querySelectorAll('.nav-item')[3])"><span class="ql-icon">💼</span> Key Projects <span class="ql-arrow">→</span></div>
-          <div class="qlink" onclick="showPanel('stack', document.querySelectorAll('.nav-item')[4])"><span class="ql-icon">🛠️</span> Tech Stack <span class="ql-arrow">→</span></div>
-          <div class="qlink" onclick="showPanel('cv', document.querySelectorAll('.nav-item')[5])"><span class="ql-icon">📄</span> CV &amp; Resume <span class="ql-arrow">→</span></div>
-          <div class="qlink" onclick="showPanel('contact', document.querySelectorAll('.nav-item')[6])"><span class="ql-icon">📬</span> Contact Me <span class="ql-arrow">→</span></div>
+          <div class="qlink" onclick="showPanel('profile')"><span class="ql-icon">👤</span> About Me <span class="ql-arrow">→</span></div>
+          <div class="qlink" onclick="showPanel('journey')"><span class="ql-icon">🗺️</span> Career Journey <span class="ql-arrow">→</span></div>
+          <div class="qlink" onclick="showPanel('projects')"><span class="ql-icon">💼</span> Key Projects <span class="ql-arrow">→</span></div>
+          <div class="qlink" onclick="showPanel('stack')"><span class="ql-icon">🛠️</span> Tech Stack <span class="ql-arrow">→</span></div>
+          <div class="qlink" onclick="showPanel('cv')"><span class="ql-icon">📄</span> CV &amp; Resume <span class="ql-arrow">→</span></div>
+          <div class="qlink" onclick="showPanel('contact')"><span class="ql-icon">📬</span> Contact Me <span class="ql-arrow">→</span></div>
         </div>
       </div>
       <div class="card card-accent2">
@@ -1212,4 +1212,207 @@ img { display:block; max-width:100%; }
       </div>
     </div>
     <div class="panel-footer">
-      <span class="footer-quote">"Full-stack AI engineering — from embeddings to edge deployme
+      <span class="footer-quote">"Full-stack AI engineering — from embeddings to edge deploymements."</span>
+      <span class="footer-sig">© 2026 <span>Pavan A</span></span>
+    </div>
+  </div>
+
+  <!-- ─ CV ─────────────────────────────────────────────────────── -->
+  <div class="panel" id="panel-cv">
+    <div class="panel-header">
+      <div class="panel-eyebrow">// 05 — Resume</div>
+      <h2 class="panel-title">CV &amp; <em>Resume</em></h2>
+      <div class="panel-divider"></div>
+    </div>
+    <div class="cv-doc">
+      <div class="cv-toprow">
+        <div>
+          <div class="cv-name">Pavan A</div>
+          <div class="cv-title-line">🤖 Senior AI/ML Engineer · Generative AI · Agentic Systems · AWS Certified</div>
+        </div>
+        <div class="cv-contact-col">
+          <span>📍 Austin, TX, United States</span>
+          <a href="mailto:pavanakki54@gmail.com">✉️ pavanakki54@gmail.com</a>
+          <a href="tel:+13022080409">📞 +1 302-208-0409</a>
+          <a href="https://linkedin.com/in/pavan-akki-48690a200/" target="_blank">💼 LinkedIn</a>
+          <a href="https://github.com/pavanakki54-bit" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+      <div class="cv-sec">
+        <div class="cv-sec-title">👤 Professional Summary</div>
+        <p class="cv-para">Senior AI/ML Engineer with 10+ years building production ML, NLP, and Generative AI solutions across banking, investment, healthcare, and pharma. Specializing in Agentic AI systems — LLM-powered assistants with intent routing, tool invocation, verification loops, and human handoff. Hands-on with LangChain, LangGraph, Amazon Bedrock, Azure OpenAI, GCP Vertex AI, RAG/vector search (FAISS, OpenSearch), React/Angular frontends, Python FastAPI/Spring Boot backends, and AWS/Azure/GCP MLOps with Docker, Kubernetes, Terraform, and MLflow.</p>
+      </div>
+      <div class="cv-sec">
+        <div class="cv-sec-title">💼 Experience</div>
+        <div class="cv-exp-item">
+          <div class="cv-exp-head"><span class="cv-company">🏦 Wells Fargo — Austin, TX</span><span class="cv-period">May 2022 – Present</span></div>
+          <div class="cv-role-label">Senior AI/ML Engineer — Generative AI &amp; Agentic Intelligent Systems</div>
+          <ul class="cv-blist">
+            <li>Built banking agentic AI assistant with LangChain, LangGraph, Amazon Bedrock — reduced unsupported answers by ~40%</li>
+            <li>React + TypeScript agent console with confidence scoring and AI-to-human handoff flows</li>
+            <li>EKS deployment with Helm, GitHub Actions, CodePipeline and OpenTelemetry tracing</li>
+          </ul>
+        </div>
+        <div class="cv-exp-item">
+          <div class="cv-exp-head"><span class="cv-company">📈 Charles Schwab — Westlake, TX</span><span class="cv-period">Jun 2020 – May 2022</span></div>
+          <div class="cv-role-label">Senior ML Engineer — Applied AI &amp; Generative Systems</div>
+          <ul class="cv-blist">
+            <li>Angular dashboards — portfolio analytics, trade anomaly detection, AI recommendations</li>
+            <li>NLP intent detection for investment queries using DistilBERT, RoBERTa, Azure ML</li>
+          </ul>
+        </div>
+        <div class="cv-exp-item">
+          <div class="cv-exp-head"><span class="cv-company">🏥 Anthem, Inc. — Indianapolis, IN</span><span class="cv-period">Feb 2019 – May 2020</span></div>
+          <div class="cv-role-label">Machine Learning Engineer</div>
+          <ul class="cv-blist"><li>Healthcare ML — claims anomaly detection, member risk scoring, HIPAA-compliant AWS pipelines</li></ul>
+        </div>
+        <div class="cv-exp-item">
+          <div class="cv-exp-head"><span class="cv-company">💊 Bristol Myers Squibb — New Jersey</span><span class="cv-period">Mar 2018 – Feb 2019</span></div>
+          <div class="cv-role-label">Senior Data Scientist</div>
+          <ul class="cv-blist"><li>Pharma quality deviation prediction, Angular dashboards, Azure-hosted, automated compliance reporting</li></ul>
+        </div>
+        <div class="cv-exp-item">
+          <div class="cv-exp-head"><span class="cv-company">🌐 Orion Global — Hyderabad, India</span><span class="cv-period">Jun 2016 – Feb 2018</span></div>
+          <div class="cv-role-label">Data Scientist</div>
+          <ul class="cv-blist"><li>Python Flask APIs, React UIs, SQL ETL pipelines, AWS EC2/S3 for enterprise analytics</li></ul>
+        </div>
+      </div>
+      <div class="cv-sec">
+        <div class="cv-sec-title">🎓 Education &amp; Certifications</div>
+        <div class="cv-exp-item">
+          <div class="cv-exp-head"><span class="cv-company">Jawaharlal Nehru Technological University (JNTUH)</span><span class="cv-period">2016</span></div>
+          <div class="cv-role-label">Bachelor of Technology — Computer Science</div>
+        </div>
+        <div style="margin-top:8px;"><span class="cert-pill">🏅 AWS Certified Solutions Architect — Associate</span></div>
+      </div>
+      <div class="cv-sec">
+        <div class="cv-sec-title">🛠️ Technical Skills</div>
+        <div class="cv-skills-2col">
+          <div class="cv-skill-item"><strong>🤖 Gen AI / LLMs</strong>LangChain, LangGraph, Bedrock, Azure OpenAI, Vertex AI, RAG, FAISS</div>
+          <div class="cv-skill-item"><strong>🧪 ML / NLP</strong>PyTorch, TensorFlow, scikit-learn, XGBoost, BERT, RoBERTa, MLflow</div>
+          <div class="cv-skill-item"><strong>🟠 AWS</strong>SageMaker, Bedrock, Lambda, Step Functions, EKS, DynamoDB, Redshift</div>
+          <div class="cv-skill-item"><strong>🔵 Azure</strong>Azure ML, OpenAI, Functions, AKS, Synapse, Cosmos DB, Entra ID</div>
+          <div class="cv-skill-item"><strong>🔴 GCP</strong>Vertex AI, BigQuery, Cloud Run, GKE, Cloud Storage</div>
+          <div class="cv-skill-item"><strong>⚙️ Backend</strong>FastAPI, Spring Boot, Flask, PySpark, Kafka, gRPC, GraphQL</div>
+          <div class="cv-skill-item"><strong>⚛️ Frontend</strong>React, Angular, TypeScript, Redux, Material UI, NgRx</div>
+          <div class="cv-skill-item"><strong>🔧 DevOps</strong>Docker, Kubernetes, Terraform, Helm, GitHub Actions, OpenTelemetry</div>
+        </div>
+      </div>
+      <div class="cv-actions">
+        <a href="mailto:pavanakki54@gmail.com?subject=Resume Request — Pavan A" class="btn btn-primary">📧 Request Full Resume</a>
+        <a href="https://linkedin.com/in/pavan-akki-48690a200/" target="_blank" class="btn btn-ghost">💼 LinkedIn</a>
+        <a href="https://github.com/pavanakki54-bit" target="_blank" class="btn btn-ghost">🐙 GitHub</a>
+      </div>
+    </div>
+    <div class="panel-footer" style="max-width:820px;">
+      <span class="footer-quote">"10+ years of delivering AI that earns its place in production."</span>
+      <span class="footer-sig">© 2026 <span>Pavan A</span></span>
+    </div>
+  </div>
+
+  <!-- ─ CONTACT ─────────────────────────────────────────────────── -->
+  <div class="panel" id="panel-contact">
+    <div class="panel-header">
+      <div class="panel-eyebrow">// 06 — Connect</div>
+      <h2 class="panel-title">Get In <em>Touch</em></h2>
+      <div class="panel-divider"></div>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info-col">
+        <p class="contact-intro">"Always open to discussing AI/ML architecture, Generative AI systems, agentic workflows, or cloud-native ML pipelines — whether it's a collaboration, consulting, or just geeking out over LLMs."</p>
+        <div class="contact-cards">
+          <a href="https://linkedin.com/in/pavan-akki-48690a200/" target="_blank" class="ccard">
+            <div class="ccard-icon" style="background:rgba(10,102,194,0.12);">💼</div>
+            <div><div class="cc-lbl">LinkedIn</div><div class="cc-val">linkedin.com/in/pavan-akki-48690a200</div></div>
+          </a>
+          <a href="https://github.com/pavanakki54-bit" target="_blank" class="ccard">
+            <div class="ccard-icon" style="background:rgba(255,255,255,0.06);">🐙</div>
+            <div><div class="cc-lbl">GitHub</div><div class="cc-val">github.com/pavanakki54-bit</div></div>
+          </a>
+          <a href="mailto:pavanakki54@gmail.com" class="ccard">
+            <div class="ccard-icon" style="background:rgba(234,67,53,0.1);">✉️</div>
+            <div><div class="cc-lbl">Email</div><div class="cc-val">pavanakki54@gmail.com</div></div>
+          </a>
+          <a href="tel:+13022080409" class="ccard">
+            <div class="ccard-icon" style="background:rgba(52,211,153,0.1);">📞</div>
+            <div><div class="cc-lbl">Phone</div><div class="cc-val">+1 302-208-0409</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-col">
+        <div class="form-card">
+          <div class="form-title">💬 Send a Message</div>
+          <div class="form-row">
+            <div class="fgroup"><label>👤 Name</label><input type="text" placeholder="Your full name"/></div>
+            <div class="fgroup"><label>✉️ Email</label><input type="email" placeholder="your@email.com"/></div>
+          </div>
+          <div class="fgroup"><label>📋 Subject</label><input type="text" placeholder="Collaboration, opportunity, consulting..."/></div>
+          <div class="fgroup"><label>💬 Message</label><textarea placeholder="Tell me about the project or opportunity..."></textarea></div>
+          <button class="submit-btn" onclick="handleSubmit(this)">🚀 SEND MESSAGE</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <span class="footer-quote">"The best AI systems earn trust — through safety, accuracy, and real business value."</span>
+      <span class="footer-sig">© 2026 <span>Pavan A</span> · Austin, TX</span>
+    </div>
+  </div>
+
+</main>
+</div>
+
+<script>
+function showPanel(id) {
+  document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+  var panel = document.getElementById('panel-' + id);
+  if (panel) panel.classList.add('active');
+  document.querySelectorAll('.nav-item[data-nav]').forEach(function(n) { n.classList.remove('active'); });
+  var navEl = document.querySelector('.nav-item[data-nav="' + id + '"]');
+  if (navEl) navEl.classList.add('active');
+  var main = document.getElementById('main');
+  if (main) main.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleTheme() {
+  var html = document.documentElement;
+  var isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  var knob = document.getElementById('theme-knob');
+  var label = document.getElementById('theme-label');
+  if (knob) knob.textContent = isDark ? '☀️' : '🌙';
+  if (label) label.textContent = isDark ? '☀️ Day' : '🌙 Night';
+}
+
+function handleSubmit(btn) {
+  var card = btn.closest('.form-card');
+  var inputs = card ? card.querySelectorAll('input, textarea') : [];
+  var allFilled = true;
+  inputs.forEach(function(i) { if (!i.value.trim()) allFilled = false; });
+  if (!allFilled) {
+    btn.textContent = '⚠️ Please fill all fields';
+    setTimeout(function() { btn.textContent = '🚀 SEND MESSAGE'; }, 2000);
+    return;
+  }
+  btn.textContent = '✅ Message Sent!';
+  btn.style.background = 'var(--accent3)';
+  setTimeout(function() {
+    btn.textContent = '🚀 SEND MESSAGE';
+    btn.style.background = '';
+    inputs.forEach(function(i) { i.value = ''; });
+  }, 3000);
+}
+
+// Auto-set theme by time of day
+(function() {
+  var hour = new Date().getHours();
+  if (hour >= 7 && hour < 19) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    var knob = document.getElementById('theme-knob');
+    var label = document.getElementById('theme-label');
+    if (knob) knob.textContent = '☀️';
+    if (label) label.textContent = '☀️ Day';
+  }
+})();
+</script>
+</body>
+</html>
